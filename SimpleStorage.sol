@@ -6,6 +6,18 @@ contract SimpleStorage {
      
       uint256 public favoriteNumber; // when value is not expicitly declared, defaults to null value, which in solidity is 0
 // public is a 'getter' function
+      People public person = People({favoriteNumber: 18, name: "Matthew"});
+      People public person = People({favoriteNumber: 3, name: "Sandra"});
+      People public person = People({favoriteNumber: 2, name: "Connor"});
+      People public person = People({favoriteNumber: 1, name: "Liam"});
+      struct People {
+          uint256 favoriteNumber;
+          string name;
+      }
+      
+
+
+
       function store(uint256 _favoriteNumber) public {
           favoriteNumber = _favoriteNumber; // underscore is just to differentiate this var from original. Just a naming convention in solidity
                }
